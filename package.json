@@ -1,7 +1,6 @@
 {
-  "name": "vercel-api",
+  "name": "ncs-tech-problem-vercel-api",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "vercel dev",

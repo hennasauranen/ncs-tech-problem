@@ -3,10 +3,10 @@ A Program that solves the most suitable (with most power) link station for a dev
 
 ## How to use
 Devices and link stations has their own json files in api folder.
-GET request to endpont: 
+GET request to endpont: https://ncs-tech-problem.vercel.app/api
 will return generated messages with calculated possible linkstation pairing and power for each device as response.
 
-## Installation andnt developme
+## Installation and development
 To get started clone this repo and then
 ```
 yarn
