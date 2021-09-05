@@ -8,24 +8,29 @@ export default (req: NowRequest, res: NowResponse) => {
   return res.json(generateResponse());
 };
 
-let generateResponse = (): string[] => {
+const generateResponse = (): string[] => {
   const devices: Devices = devicejson;
   const linkstations: Linkstations = linkstationjson;
   let messages: string[] = [];
 
+  //loop through devices and linkstations to compare values
   devices.devices.forEach((device) => {
     let message: string = "";
     let power: number = 0;
     linkstations.linkstations.forEach((linkstation) => {
+      //calculate distance with pythagorean theorem
       let distance: number = calculateDistance(
         device.pointX,
         device.pointY,
         linkstation.pointX,
         linkstation.pointY
       );
+      //calculate links stations power
       let calculatedPower: number = calculatePower(linkstation.reach, distance);
+      //if calculated power is bigger than power value before
       if (calculatedPower > power) {
         power = calculatedPower;
+        //generate successful case msg
         message = generateMessage(
           device.pointX,
           device.pointY,
@@ -35,9 +40,11 @@ let generateResponse = (): string[] => {
         );
       }
     });
+    //when all link stations are looped check if there is msg
     if (message) {
       messages.push(message);
     } else {
+      //if not generate msg for unsuccessful case msg
       message = generateMessage(device.pointX, device.pointY);
       messages.push(message);
     }
