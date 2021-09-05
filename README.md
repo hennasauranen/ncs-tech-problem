@@ -27,11 +27,6 @@ Start the project in localhost with
 yarn start
 ```
 
-Start the project in localhost with
-```
-yarn start
-```
-
 Deploy the project in your own prod with
 ```
 yarn deploy
