@@ -25,7 +25,7 @@ const generateResponse = (): string[] => {
         linkstation.pointX,
         linkstation.pointY
       );
-      //calculate links stations power
+      //calculate linkstations power
       let calculatedPower: number = calculatePower(linkstation.reach, distance);
       //if calculated power is bigger than power value before
       if (calculatedPower > power) {
@@ -40,11 +40,11 @@ const generateResponse = (): string[] => {
         );
       }
     });
-    //when all link stations are looped check if there is msg
+    //when all linkstations are looped check if there is msg
     if (message) {
       messages.push(message);
     } else {
-      //if not generate msg for unsuccessful case msg
+      //if not generate msg for unsuccessful case
       message = generateMessage(device.pointX, device.pointY);
       messages.push(message);
     }
