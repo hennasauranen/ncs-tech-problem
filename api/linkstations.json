@@ -1,0 +1,19 @@
+{
+  "linkstations": [
+    {
+      "pointX": 0,
+      "pointY": 0,
+      "reach": 10
+    },
+    {
+      "pointX": 20,
+      "pointY": 20,
+      "reach": 5
+    },
+    {
+      "pointX": 10,
+      "pointY": 0,
+      "reach": 12
+    }
+  ]
+}

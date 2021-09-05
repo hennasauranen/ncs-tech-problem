@@ -1,0 +1,20 @@
+{
+  "devices": [
+    {
+      "pointX": 0,
+      "pointY": 0
+    },
+    {
+      "pointX": 100,
+      "pointY": 100
+    },
+    {
+      "pointX": 15,
+      "pointY": 10
+    },
+    {
+      "pointX": 18,
+      "pointY": 18
+    }
+  ]
+}
